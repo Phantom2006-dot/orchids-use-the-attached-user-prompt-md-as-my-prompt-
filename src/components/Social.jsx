@@ -29,15 +29,15 @@ const socials = [
 export default function Social() {
   return (
     <section className="bg-[#060f07] py-20 border-t border-white/5">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <p className="text-[#22c55e] text-xs font-semibold tracking-[0.2em] uppercase mb-5">
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p className="text-[#22c55e] text-[11px] font-semibold tracking-[0.22em] uppercase mb-5">
           — STAY CONNECTED
         </p>
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-4">
+        <h2 className="font-display text-[32px] sm:text-[40px] lg:text-[46px] font-black text-white mb-4 leading-[1.1]">
           Follow the journey<br />as we build.
         </h2>
-        <p className="text-gray-400 text-base mb-10">
-          Get behind-the-scenes updates, or share ideas, and launch news before anyone else.
+        <p className="text-gray-400 text-[15px] mb-9">
+          Get behind-the-scenes updates, artisan stories, and launch news before anyone else.
         </p>
 
         <div className="flex flex-wrap items-center justify-center gap-4">

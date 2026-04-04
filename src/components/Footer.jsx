@@ -1,17 +1,13 @@
 import { useState } from 'react'
 
 const Logo = () => (
-  <div className="flex items-center gap-2.5">
-    <svg width="32" height="32" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M15 80 C15 80 15 20 15 20 C15 20 35 55 50 55 C65 55 85 20 85 20 L85 80" stroke="#22c55e" strokeWidth="14" strokeLinecap="round" fill="none"/>
-      <path d="M38 80 L38 48" stroke="#22c55e" strokeWidth="14" strokeLinecap="round"/>
-      <path d="M62 80 L62 48" stroke="#22c55e" strokeWidth="14" strokeLinecap="round"/>
-    </svg>
-    <div className="flex flex-col leading-none">
-      <span className="text-white text-sm font-bold tracking-wide">Naija</span>
-      <span className="text-white text-sm font-bold tracking-wide">Koblas</span>
-    </div>
-  </div>
+  <a href="#">
+    <img
+      src="/images/logo.webp"
+      alt="NaijaKoblas"
+      className="h-7 w-auto object-contain"
+    />
+  </a>
 )
 
 const InstagramIcon = () => (
@@ -38,8 +34,8 @@ const TwitterIcon = () => (
 
 const footerLinks = {
   Products: ['Home', 'Shoes', 'Bags', 'Belts', 'New In'],
-  Company: ['About Us', 'Careers', 'Press', 'Become a Vendor', 'Vendors'],
-  Support: ['Help Center', 'Order Status', 'Returns', 'Shipping Info', 'Returns'],
+  Company: ['About', 'Become a Vendor', 'Vendors', 'Contact', 'Blog'],
+  Support: ['Help Center', 'Order Status', 'Shipping Info', 'Returns'],
 }
 
 export default function Footer() {

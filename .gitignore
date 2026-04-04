@@ -4,3 +4,5 @@ dist/
 # .env.local # Removed by Orchids to allow .env files
 .DS_Store
 *.log
+node_modules
+.venv

@@ -57,32 +57,31 @@ const features = [
 
 export default function Features() {
   return (
-    <section className="bg-[#060f07] py-24 lg:py-32">
+    <section className="bg-[#060f07] py-20 lg:py-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="mb-14">
-          <p className="text-gray-500 text-xs font-semibold tracking-[0.2em] uppercase mb-4">WHY WE EXIST</p>
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-tight max-w-2xl">
+        <div className="mb-12">
+          <p className="text-gray-500 text-[11px] font-semibold tracking-[0.22em] uppercase mb-4">WHY WE EXIST</p>
+          <h2 className="font-display text-[38px] sm:text-[48px] lg:text-[54px] font-black text-white leading-[1.05] max-w-2xl mb-5">
             A marketplace unlike anything before it.
           </h2>
-          <p className="text-gray-400 text-base sm:text-lg mt-5 max-w-xl leading-relaxed">
+          <p className="text-gray-400 text-[15px] leading-relaxed max-w-lg">
             From handmade leather shoes to premium artisan products — we are building a space where quality, identity and culture meet.
           </p>
         </div>
-
-        {/* Feature Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        {/* Feature 2×2 grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {features.map((feature, i) => (
             <div
               key={i}
-              className="bg-[#0d1f0f] border border-[#22c55e]/15 rounded-xl p-6 hover:border-[#22c55e]/40 transition-all duration-300 hover:bg-[#0f2512] group"
+              className="bg-[#0d1f0f] border border-[#22c55e]/15 rounded-xl p-6 hover:border-[#22c55e]/35 transition-all duration-300 hover:bg-[#0f2412] group"
             >
               <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-10 h-10 bg-[#22c55e]/10 rounded-lg flex items-center justify-center group-hover:bg-[#22c55e]/20 transition-colors">
+                <div className="flex-shrink-0 w-9 h-9 bg-[#22c55e]/10 rounded-lg flex items-center justify-center group-hover:bg-[#22c55e]/20 transition-colors">
                   {feature.icon}
                 </div>
                 <div>
-                  <h3 className="text-white font-bold text-base mb-2">{feature.title}</h3>
+                  <h3 className="text-white font-bold text-[15px] mb-2">{feature.title}</h3>
                   <p className="text-gray-400 text-sm leading-relaxed">{feature.description}</p>
                 </div>
               </div>

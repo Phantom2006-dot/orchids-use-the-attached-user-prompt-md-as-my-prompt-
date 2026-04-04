@@ -12,20 +12,20 @@ export default function CTA() {
   }
 
   return (
-    <section id="early-access" className="bg-[#060f07] py-24 lg:py-32 relative overflow-hidden">
+    <section id="early-access" className="bg-[#060f07] py-20 lg:py-28 relative overflow-hidden">
       {/* Background radial glow */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <div className="w-[800px] h-[400px] bg-[#22c55e]/4 rounded-full blur-[100px]" />
+        <div className="w-[700px] h-[350px] bg-[#22c55e]/5 rounded-full blur-[90px]" />
       </div>
 
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-        <p className="text-[#22c55e] text-xs font-semibold tracking-[0.2em] uppercase mb-5">
-          — BE AMONG THE FIRST
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+        <p className="text-[#22c55e] text-[11px] font-semibold tracking-[0.22em] uppercase mb-5">
+          — JOIN EARLY ACCESS IN THE LIST
         </p>
-        <h2 className="text-5xl sm:text-6xl lg:text-7xl font-black text-white leading-tight mb-6">
+        <h2 className="font-display text-[44px] sm:text-[56px] lg:text-[64px] font-black text-white leading-[1.05] mb-6">
           Be the first<br />to know.
         </h2>
-        <p className="text-gray-400 text-base sm:text-lg leading-relaxed max-w-xl mx-auto mb-10">
+        <p className="text-gray-400 text-[15px] leading-relaxed max-w-md mx-auto mb-9">
           Join our early access list and be the first to experience NaijaKoblas when we go live. Exclusive first access. No spam.
         </p>
 
