@@ -8,8 +8,13 @@ html {
   scroll-behavior: smooth;
 }
 
+:root {
+  --font-brand: 'Syne', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+}
+
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-body);
   background-color: #060f07;
   color: #ffffff;
   -webkit-font-smoothing: antialiased;
@@ -22,5 +27,5 @@ html.light body {
 }
 
 .font-display {
-  font-family: 'Barlow', 'Space Grotesk', sans-serif;
+  font-family: var(--font-brand);
 }

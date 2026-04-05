@@ -1,3 +1,5 @@
+import { useTheme } from '../context/ThemeContext'
+
 const InstagramIcon = () => (
   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
@@ -27,16 +29,18 @@ const socials = [
 ]
 
 export default function Social() {
+  const { isDark } = useTheme()
+
   return (
-    <section className="bg-[#060f07] py-20 border-t border-white/5">
+    <section className={`py-20 border-t transition-colors duration-300 ${isDark ? 'bg-[#060f07] border-white/5' : 'bg-[#f5f5f0] border-black/5'}`}>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <p className="text-[#22c55e] text-[11px] font-semibold tracking-[0.22em] uppercase mb-5">
           — STAY CONNECTED
         </p>
-        <h2 className="font-display text-[32px] sm:text-[40px] lg:text-[46px] font-extrabold text-white mb-4 leading-[1.1] tracking-[-0.02em]">
+        <h2 className={`font-display text-[32px] sm:text-[40px] lg:text-[46px] font-extrabold mb-4 leading-[1.1] tracking-[-0.02em] ${isDark ? 'text-white' : 'text-[#111111]'}`}>
           Follow the journey<br />as we build.
         </h2>
-        <p className="text-gray-400 text-[15px] mb-9">
+        <p className={`text-[15px] mb-9 ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
           Get behind-the-scenes updates, artisan stories, and launch news before anyone else.
         </p>
 
@@ -45,7 +49,7 @@ export default function Social() {
             <a
               key={s.label}
               href={s.href}
-              className="flex items-center gap-2.5 bg-[#0d1f0f] border border-white/10 hover:border-[#22c55e]/40 hover:bg-[#0f2512] text-white text-sm font-medium px-5 py-3 rounded-lg transition-all duration-200 hover:scale-[1.03]"
+              className={`flex items-center gap-2.5 border text-sm font-medium px-5 py-3 rounded-lg transition-all duration-200 hover:scale-[1.03] ${isDark ? 'bg-[#0d1f0f] border-white/10 hover:border-[#22c55e]/40 hover:bg-[#0f2512] text-white' : 'bg-white border-black/10 hover:border-[#22c55e]/50 hover:bg-[#f0fdf4] text-gray-900'}`}
             >
               <span className="text-[#22c55e]">{s.icon}</span>
               {s.label}

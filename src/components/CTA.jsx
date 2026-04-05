@@ -6,26 +6,34 @@ export default function CTA() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    if (email.trim()) {
-      setSubmitted(true)
-    }
+    if (email.trim()) setSubmitted(true)
   }
 
   return (
-    <section id="early-access" className="bg-[#060f07] py-20 lg:py-28 relative overflow-hidden">
-      {/* Background radial glow */}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <div className="w-[700px] h-[350px] bg-[#22c55e]/5 rounded-full blur-[90px]" />
-      </div>
+    <section
+      id="early-access"
+      className="relative overflow-hidden py-28 lg:py-36"
+      style={{
+        backgroundImage: 'url(/images/sneakers.jpg)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center 40%',
+      }}
+    >
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-black/72" />
+      {/* Green tint glow */}
+      <div className="absolute inset-0 bg-gradient-to-t from-[#060f07]/80 via-transparent to-black/30 pointer-events-none" />
 
-      <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <div className="relative z-10 max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <p className="text-[#22c55e] text-[11px] font-semibold tracking-[0.22em] uppercase mb-5">
-          — JOIN EARLY ACCESS IN THE LIST
+          — JOIN EARLY ACCESS
         </p>
-        <h2 className="font-display text-[44px] sm:text-[56px] lg:text-[64px] font-extrabold text-white leading-[1.05] tracking-[-0.02em] mb-6">
+
+        <h2 className="font-display text-[44px] sm:text-[56px] lg:text-[64px] font-extrabold leading-[1.05] tracking-[-0.02em] mb-6 text-white">
           Be the first<br />to know.
         </h2>
-        <p className="text-gray-400 text-[15px] leading-relaxed max-w-md mx-auto mb-9">
+
+        <p className="text-[15px] leading-relaxed max-w-md mx-auto mb-9 text-gray-300">
           Join our early access list and be the first to experience NaijaKoblas when we go live. Exclusive first access. No spam.
         </p>
 
@@ -37,7 +45,7 @@ export default function CTA() {
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Your email address"
               required
-              className="flex-1 bg-[#0d1f0f] border border-white/10 text-white placeholder-gray-500 text-sm px-4 py-3.5 rounded-md focus:outline-none focus:border-[#22c55e]/60 transition-colors"
+              className="flex-1 bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder-gray-400 text-sm px-4 py-3.5 rounded-md focus:outline-none focus:border-[#22c55e]/70 transition-colors"
             />
             <button
               type="submit"
@@ -47,15 +55,15 @@ export default function CTA() {
             </button>
           </form>
         ) : (
-          <div className="flex items-center justify-center gap-3 bg-[#0d2a12] border border-[#22c55e]/30 rounded-md px-6 py-4 max-w-lg mx-auto">
+          <div className="flex items-center justify-center gap-3 bg-[#22c55e]/15 backdrop-blur-sm border border-[#22c55e]/40 rounded-md px-6 py-4 max-w-lg mx-auto">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22c55e" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
               <polyline points="20 6 9 17 4 12"/>
             </svg>
-            <span className="text-[#22c55e] text-sm font-medium">You're on the list! We'll reach out soon.</span>
+            <span className="text-[#4ade80] text-sm font-medium">You're on the list! We'll reach out soon.</span>
           </div>
         )}
 
-        <p className="text-gray-600 text-xs mt-5">
+        <p className="text-xs mt-5 text-gray-500">
           There won't be many spots. Just the access when we drop.
         </p>
       </div>
