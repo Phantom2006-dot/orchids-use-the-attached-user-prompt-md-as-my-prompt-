@@ -33,7 +33,7 @@ export default function Hero() {
             </div>
 
             {/* Headline */}
-            <h1 className="font-display text-[56px] sm:text-[64px] lg:text-[72px] xl:text-[80px] font-black leading-[0.92] tracking-tight mb-7">
+            <h1 className="font-display text-[44px] sm:text-[60px] lg:text-[68px] xl:text-[76px] font-extrabold leading-[0.93] tracking-[-0.02em] mb-7">
               <span className="text-white block">Built from</span>
               <span className="text-[#22c55e] block">culture.</span>
               <span className="text-white block">Worn with</span>
@@ -64,7 +64,7 @@ export default function Hero() {
                 />
                 <button
                   type="submit"
-                  className="bg-[#22c55e] hover:bg-[#16a34a] text-black font-bold text-sm px-5 py-3 rounded-md transition-all duration-200 whitespace-nowrap hover:scale-[1.02] active:scale-[0.98]"
+                  className="w-full sm:w-auto bg-[#22c55e] hover:bg-[#16a34a] text-black font-bold text-sm px-5 py-3 rounded-md transition-all duration-200 whitespace-nowrap hover:scale-[1.02] active:scale-[0.98]"
                 >
                   + Join Early Access
                 </button>
@@ -85,13 +85,13 @@ export default function Hero() {
 
           {/* ── Right — Bag Image ── */}
           <div className="hidden lg:flex relative items-center justify-end h-[calc(100vh-64px)]">
-            {/* Bag PNG floats directly on the dark background — no bg panel */}
-            <div className="relative w-[520px] h-[76vh] flex items-center justify-center">
+            {/* Bag PNG fills right column — sized to match design */}
+            <div className="relative w-full h-full flex items-center justify-end">
               <img
                 src="/images/bag.png"
                 alt="NaijaKoblas Premium Leather Bag"
-                className="w-[90%] h-[90%] object-contain object-center"
-                style={{ filter: 'drop-shadow(0 24px 52px rgba(0,0,0,0.6))' }}
+                className="w-full h-[92%] object-contain object-right"
+                style={{ filter: 'drop-shadow(0 32px 64px rgba(0,0,0,0.55))' }}
               />
             </div>
           </div>

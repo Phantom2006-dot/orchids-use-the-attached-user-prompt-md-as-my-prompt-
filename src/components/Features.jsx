@@ -62,7 +62,7 @@ export default function Features() {
         {/* Header */}
         <div className="mb-12">
           <p className="text-gray-500 text-[11px] font-semibold tracking-[0.22em] uppercase mb-4">WHY WE EXIST</p>
-          <h2 className="font-display text-[38px] sm:text-[48px] lg:text-[54px] font-black text-white leading-[1.05] max-w-2xl mb-5">
+          <h2 className="font-display text-[38px] sm:text-[48px] lg:text-[54px] font-extrabold text-white leading-[1.05] tracking-[-0.02em] max-w-2xl mb-5">
             A marketplace unlike anything before it.
           </h2>
           <p className="text-gray-400 text-[15px] leading-relaxed max-w-lg">

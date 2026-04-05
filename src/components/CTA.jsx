@@ -22,7 +22,7 @@ export default function CTA() {
         <p className="text-[#22c55e] text-[11px] font-semibold tracking-[0.22em] uppercase mb-5">
           — JOIN EARLY ACCESS IN THE LIST
         </p>
-        <h2 className="font-display text-[44px] sm:text-[56px] lg:text-[64px] font-black text-white leading-[1.05] mb-6">
+        <h2 className="font-display text-[44px] sm:text-[56px] lg:text-[64px] font-extrabold text-white leading-[1.05] tracking-[-0.02em] mb-6">
           Be the first<br />to know.
         </h2>
         <p className="text-gray-400 text-[15px] leading-relaxed max-w-md mx-auto mb-9">
@@ -35,13 +35,13 @@ export default function CTA() {
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="General address"
+              placeholder="Your email address"
               required
               className="flex-1 bg-[#0d1f0f] border border-white/10 text-white placeholder-gray-500 text-sm px-4 py-3.5 rounded-md focus:outline-none focus:border-[#22c55e]/60 transition-colors"
             />
             <button
               type="submit"
-              className="bg-[#22c55e] hover:bg-[#16a34a] text-black font-semibold text-sm px-6 py-3.5 rounded-md transition-all duration-200 whitespace-nowrap hover:scale-[1.02] active:scale-[0.98]"
+              className="w-full sm:w-auto bg-[#22c55e] hover:bg-[#16a34a] text-black font-semibold text-sm px-6 py-3.5 rounded-md transition-all duration-200 whitespace-nowrap hover:scale-[1.02] active:scale-[0.98]"
             >
               + Join Early Access
             </button>

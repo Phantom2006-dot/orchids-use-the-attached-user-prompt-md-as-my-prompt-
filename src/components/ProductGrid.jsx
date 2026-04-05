@@ -1,4 +1,22 @@
+import { useRef, useState } from 'react'
+
+const items = [
+  { src: '/images/sneakers.jpg', alt: 'Artisan Sneakers', label: 'ARTISAN SHOES' },
+  { src: '/images/belt.jpg', alt: 'Premium Belts', label: 'PREMIUM BOOTS' },
+  { src: '/images/boots.jpg', alt: 'Artisan Boots', label: 'ARTISAN GOODS' },
+]
+
 export default function ProductGrid() {
+  const scrollRef = useRef(null)
+  const [active, setActive] = useState(0)
+
+  const handleScroll = () => {
+    const el = scrollRef.current
+    if (!el) return
+    const idx = Math.round(el.scrollLeft / el.offsetWidth)
+    setActive(idx)
+  }
+
   return (
     <section className="bg-[#060f07] pb-0">
       {/* MERCH label */}
@@ -6,8 +24,50 @@ export default function ProductGrid() {
         <p className="text-[11px] font-semibold tracking-[0.22em] uppercase text-gray-600">MERCH</p>
       </div>
 
-      {/* Single-row: sneakers (wide, 2 cols) | belt | boots — matches design */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* ── Mobile: horizontal snap carousel ── */}
+      <div className="sm:hidden">
+        <div
+          ref={scrollRef}
+          onScroll={handleScroll}
+          className="flex overflow-x-auto snap-x snap-mandatory scrollbar-none"
+          style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+        >
+          {items.map((item, i) => (
+            <div key={i} className="snap-start flex-none w-full relative cursor-pointer">
+              <div className="aspect-[16/10] overflow-hidden">
+                <img
+                  src={item.src}
+                  alt={item.alt}
+                  className="w-full h-full object-cover object-center"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
+              </div>
+              <div className="absolute bottom-3 left-3">
+                <span className="text-white text-[10px] font-bold tracking-[0.18em] uppercase">{item.label}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Dot indicators */}
+        <div className="flex justify-center gap-1.5 pt-2.5 pb-1">
+          {items.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => {
+                scrollRef.current?.scrollTo({ left: i * scrollRef.current.offsetWidth, behavior: 'smooth' })
+                setActive(i)
+              }}
+              className={`h-1.5 rounded-full transition-all duration-300 ${
+                active === i ? 'w-5 bg-[#22c55e]' : 'w-1.5 bg-white/25'
+              }`}
+            />
+          ))}
+        </div>
+      </div>
+
+      {/* ── Desktop: grid layout (unchanged) ── */}
+      <div className="hidden sm:block max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-4 gap-2">
 
           {/* Sneakers — 2 cols wide */}

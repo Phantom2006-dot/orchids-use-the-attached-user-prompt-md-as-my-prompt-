@@ -33,7 +33,7 @@ export default function Social() {
         <p className="text-[#22c55e] text-[11px] font-semibold tracking-[0.22em] uppercase mb-5">
           — STAY CONNECTED
         </p>
-        <h2 className="font-display text-[32px] sm:text-[40px] lg:text-[46px] font-black text-white mb-4 leading-[1.1]">
+        <h2 className="font-display text-[32px] sm:text-[40px] lg:text-[46px] font-extrabold text-white mb-4 leading-[1.1] tracking-[-0.02em]">
           Follow the journey<br />as we build.
         </h2>
         <p className="text-gray-400 text-[15px] mb-9">

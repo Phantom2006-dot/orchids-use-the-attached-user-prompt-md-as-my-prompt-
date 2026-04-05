@@ -65,7 +65,7 @@ export default function Footer() {
                   onChange={(e) => setNewsletterEmail(e.target.value)}
                   placeholder="Enter your email"
                   required
-                  className="bg-[#0d1f0f] border border-white/10 text-white placeholder-gray-600 text-xs px-3 py-2.5 rounded-md focus:outline-none focus:border-[#22c55e]/50 w-48 sm:w-56 transition-colors"
+                  className="flex-1 bg-[#0d1f0f] border border-white/10 text-white placeholder-gray-600 text-xs px-3 py-2.5 rounded-md focus:outline-none focus:border-[#22c55e]/50 sm:w-56 transition-colors"
                 />
                 <button
                   type="submit"
@@ -83,9 +83,9 @@ export default function Footer() {
 
       {/* Main footer */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10">
+        <div className="grid grid-cols-2 lg:grid-cols-5 gap-10">
           {/* Brand col */}
-          <div className="lg:col-span-2">
+          <div className="col-span-2 lg:col-span-2">
             <Logo />
             <p className="text-gray-400 text-sm leading-relaxed mt-5 max-w-xs">
               Connecting craftsmanship, culture, and commerce. Premium African leather goods from hands that know the craft.

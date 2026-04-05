@@ -3,7 +3,7 @@ export default function Showcase() {
     <section className="bg-[#060f07]">
 
       {/* Main split: Loafer image (left) | Belt image + Quote (right) */}
-      <div className="grid grid-cols-1 lg:grid-cols-2">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-0.5 lg:gap-0">
 
         {/* Left — loafer/monk-strap image, full height */}
         <div className="relative overflow-hidden group">
@@ -33,7 +33,7 @@ export default function Showcase() {
             <p className="text-[#22c55e] text-[10px] font-semibold tracking-[0.22em] uppercase mb-5">
               — CRAFTED WITH PRIDE
             </p>
-            <blockquote className="font-display text-[26px] sm:text-[30px] lg:text-[34px] font-bold leading-[1.15] text-white mb-6">
+            <blockquote className="font-display text-[26px] sm:text-[30px] lg:text-[34px] font-extrabold leading-[1.15] tracking-[-0.02em] text-white mb-6">
               "Behind every product is a maker whose craft deserves a{' '}
               <span className="text-[#22c55e]">wider stage.</span>"
             </blockquote>
@@ -46,7 +46,7 @@ export default function Showcase() {
       </div>
 
       {/* Bottom row: 3 equal tiles — belt | boots | NEW bag */}
-      <div className="grid grid-cols-1 sm:grid-cols-3">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-0.5">
 
         <div className="relative overflow-hidden group cursor-pointer">
           <div className="h-[220px] sm:h-64 overflow-hidden">
@@ -76,8 +76,8 @@ export default function Showcase() {
           </div>
         </div>
 
-        {/* Bag PNG — on pure dark bg */}
-        <div className="relative overflow-hidden group cursor-pointer bg-[#060f07]">
+        {/* Bag PNG — on white bg */}
+        <div className="relative overflow-hidden group cursor-pointer bg-white">
           <div className="h-[220px] sm:h-64 flex items-center justify-center">
             <img
               src="/images/bag.png"
