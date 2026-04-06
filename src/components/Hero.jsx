@@ -18,7 +18,7 @@ export default function Hero() {
   }
 
   return (
-    <section className={`min-h-screen pt-16 overflow-hidden relative transition-colors duration-300 ${isDark ? 'bg-[#060f07]' : 'bg-[#f5f5f0]'}`}>
+    <section className={`min-h-screen pt-28 overflow-hidden relative transition-colors duration-300 ${isDark ? 'bg-[#060f07]' : 'bg-[#f5f5f0]'}`}>
       <div className={`absolute inset-0 pointer-events-none ${isDark ? 'bg-gradient-to-br from-[#0c2010] via-[#060f07] to-[#060f07]' : 'bg-gradient-to-br from-[#d4f7de] via-[#f5f5f0] to-[#f5f5f0]'}`} />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative h-full">
