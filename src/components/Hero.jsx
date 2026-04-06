@@ -80,12 +80,12 @@ export default function Hero() {
           </div>
 
           {/* Right — Bag Image */}
-          <div className="hidden lg:flex relative items-center justify-end h-[calc(100vh-64px)]">
+          <div className="hidden lg:flex relative items-center justify-end h-[calc(100vh-64px)] overflow-hidden">
             <div className="relative w-full h-full flex items-center justify-end">
               <img
                 src="/images/bag-adjusted.png"
                 alt="NaijaKoblas Premium Leather Bag"
-                className="w-full h-[92%] object-contain object-right"
+                className="w-full h-[92%] object-contain object-right scale-[2] origin-right"
                 style={{ filter: isDark ? 'drop-shadow(0 32px 64px rgba(0,0,0,0.55))' : 'drop-shadow(0 32px 64px rgba(0,0,0,0.2))' }}
               />
             </div>
