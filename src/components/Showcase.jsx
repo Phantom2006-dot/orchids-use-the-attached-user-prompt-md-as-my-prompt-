@@ -42,10 +42,10 @@ export default function Showcase() {
       {/* Bottom row: left half = Belts + Boots stacked, right half = Leather Bags */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-0.5">
 
-        {/* Left half — Belts & Boots stacked */}
-        <div className="flex flex-col gap-0.5">
-          <div className="relative overflow-hidden group cursor-pointer">
-            <div className="h-[110px] sm:h-32 overflow-hidden">
+        {/* Left half — Belts & Boots side by side */}
+        <div className="flex flex-row gap-0.5">
+          <div className="relative overflow-hidden group cursor-pointer flex-1">
+            <div className="h-[220px] sm:h-64 overflow-hidden">
               <img
                 src="/images/belt.jpg"
                 alt="Belts & Accessories"
@@ -53,13 +53,13 @@ export default function Showcase() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
             </div>
-            <div className="absolute bottom-2 left-3">
+            <div className="absolute bottom-3 left-3">
               <span className="text-white text-[10px] font-bold tracking-[0.18em] uppercase">BELTS & ACCESSORIES</span>
             </div>
           </div>
 
-          <div className="relative overflow-hidden group cursor-pointer">
-            <div className="h-[110px] sm:h-32 overflow-hidden">
+          <div className="relative overflow-hidden group cursor-pointer flex-1">
+            <div className="h-[220px] sm:h-64 overflow-hidden">
               <img
                 src="/images/boots.jpg"
                 alt="Artisan Boots"
@@ -67,7 +67,7 @@ export default function Showcase() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
             </div>
-            <div className="absolute bottom-2 left-3">
+            <div className="absolute bottom-3 left-3">
               <span className="text-white text-[10px] font-bold tracking-[0.18em] uppercase">ARTISAN BOOTS</span>
             </div>
           </div>
