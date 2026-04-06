@@ -75,7 +75,7 @@ export default function Navbar() {
                 key={link}
                 href="#"
                 className={`text-[13px] font-medium transition-colors duration-200 whitespace-nowrap ${
-                  isDark ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-black'
+                  isDark ? 'text-gray-300 hover:text-green-400' : 'text-gray-600 hover:text-green-500'
                 }`}
               >
                 {link}
@@ -85,7 +85,7 @@ export default function Navbar() {
 
           {/* Right side actions */}
           <div className="flex items-center gap-0.5">
-            <button className={`hidden md:flex p-2 rounded-md transition-colors ${isDark ? 'text-gray-300 hover:text-white hover:bg-white/5' : 'text-gray-500 hover:text-black hover:bg-black/5'}`}>
+            <button className={`hidden md:flex p-2 rounded-md transition-colors ${isDark ? 'text-gray-300 hover:text-green-400 hover:bg-white/5' : 'text-gray-500 hover:text-green-500 hover:bg-black/5'}`}>
               <SearchIcon />
             </button>
 
@@ -93,12 +93,12 @@ export default function Navbar() {
             <button
               onClick={toggle}
               title={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
-              className={`hidden md:flex p-2 rounded-md transition-colors ${isDark ? 'text-gray-300 hover:text-white hover:bg-white/5' : 'text-gray-500 hover:text-black hover:bg-black/5'}`}
+              className={`hidden md:flex p-2 rounded-md transition-colors ${isDark ? 'text-gray-300 hover:text-green-400 hover:bg-white/5' : 'text-gray-500 hover:text-green-500 hover:bg-black/5'}`}
             >
               {isDark ? <SunIcon /> : <MoonIcon />}
             </button>
 
-            <button className={`hidden md:flex p-2 rounded-md transition-colors ${isDark ? 'text-gray-300 hover:text-white hover:bg-white/5' : 'text-gray-500 hover:text-black hover:bg-black/5'}`}>
+            <button className={`hidden md:flex p-2 rounded-md transition-colors ${isDark ? 'text-gray-300 hover:text-green-400 hover:bg-white/5' : 'text-gray-500 hover:text-green-500 hover:bg-black/5'}`}>
               <CartIcon />
             </button>
 
@@ -110,7 +110,7 @@ export default function Navbar() {
             </a>
 
             <button
-              className={`lg:hidden p-1.5 ml-1 rounded-md transition-colors ${isDark ? 'text-gray-300 hover:text-white' : 'text-gray-500 hover:text-black'}`}
+              className={`lg:hidden p-1.5 ml-1 rounded-md transition-colors ${isDark ? 'text-gray-300 hover:text-green-400' : 'text-gray-500 hover:text-green-500'}`}
               onClick={() => setMobileOpen(!mobileOpen)}
             >
               {mobileOpen ? <CloseIcon /> : <MenuIcon />}
@@ -127,18 +127,20 @@ export default function Navbar() {
               <a
                 key={link}
                 href="#"
-                className={`py-2.5 text-sm font-medium border-b transition-colors ${isDark ? 'text-gray-300 hover:text-white border-white/5' : 'text-gray-600 hover:text-black border-black/5'}`}
+                className={`py-2.5 text-sm font-medium border-b transition-colors ${
+                  isDark ? 'text-gray-300 hover:text-green-400 border-white/5' : 'text-gray-600 hover:text-green-500 border-black/5'
+                }`}
                 onClick={() => setMobileOpen(false)}
               >
                 {link}
               </a>
             ))}
             <div className="flex items-center gap-4 pt-4">
-              <button className={isDark ? 'text-gray-300 hover:text-white' : 'text-gray-500 hover:text-black'}><SearchIcon /></button>
-              <button className={isDark ? 'text-gray-300 hover:text-white' : 'text-gray-500 hover:text-black'} onClick={toggle}>
+              <button className={isDark ? 'text-gray-300 hover:text-green-400' : 'text-gray-500 hover:text-green-500'}><SearchIcon /></button>
+              <button className={isDark ? 'text-gray-300 hover:text-green-400' : 'text-gray-500 hover:text-green-500'} onClick={toggle}>
                 {isDark ? <SunIcon /> : <MoonIcon />}
               </button>
-              <button className={isDark ? 'text-gray-300 hover:text-white' : 'text-gray-500 hover:text-black'}><CartIcon /></button>
+              <button className={isDark ? 'text-gray-300 hover:text-green-400' : 'text-gray-500 hover:text-green-500'}><CartIcon /></button>
             </div>
             <a
               href="#early-access"
