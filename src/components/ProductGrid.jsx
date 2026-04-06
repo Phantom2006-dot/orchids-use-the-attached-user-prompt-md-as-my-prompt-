@@ -65,7 +65,7 @@ export default function ProductGrid() {
 
           {/* Sneakers — 2 cols wide */}
           <div className="col-span-2 group relative overflow-hidden rounded-xl cursor-pointer">
-            <div className="aspect-[16/10] overflow-hidden">
+            <div className="aspect-[2/3] overflow-hidden">
               <img src="/images/sneakers.jpg" alt="Artisan Sneakers" className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
             </div>
@@ -76,7 +76,7 @@ export default function ProductGrid() {
 
           {/* Belt */}
           <div className="col-span-1 group relative overflow-hidden rounded-xl cursor-pointer">
-            <div className="aspect-[16/10] overflow-hidden">
+            <div className="aspect-[2/3] overflow-hidden">
               <img src="/images/belt.jpg" alt="Premium Belts" className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
             </div>
@@ -87,7 +87,7 @@ export default function ProductGrid() {
 
           {/* Boots */}
           <div className="col-span-1 group relative overflow-hidden rounded-xl cursor-pointer">
-            <div className="aspect-[16/10] overflow-hidden">
+            <div className="aspect-[2/3] overflow-hidden">
               <img src="/images/boots.jpg" alt="Artisan Boots" className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
             </div>
