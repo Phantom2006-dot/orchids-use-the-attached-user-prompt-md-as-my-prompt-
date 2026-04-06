@@ -85,7 +85,7 @@ export default function Hero() {
               <img
                 src="/images/bag-adjusted.png"
                 alt="NaijaKoblas Premium Leather Bag"
-                className="w-full h-[92%] object-contain object-right scale-[1.6] origin-right"
+                className="w-full h-[92%] object-contain object-right scale-[1.3] origin-right"
                 style={{ filter: isDark ? 'drop-shadow(0 32px 64px rgba(0,0,0,0.55))' : 'drop-shadow(0 32px 64px rgba(0,0,0,0.2))' }}
               />
             </div>
