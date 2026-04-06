@@ -83,7 +83,7 @@ export default function Hero() {
           <div className="hidden lg:flex relative items-center justify-end h-[calc(100vh-64px)]">
             <div className="relative w-full h-full flex items-center justify-end">
               <img
-                src="/images/bag.png"
+                src="/images/bag-adjusted.png"
                 alt="NaijaKoblas Premium Leather Bag"
                 className="w-full h-[92%] object-contain object-right"
                 style={{ filter: isDark ? 'drop-shadow(0 32px 64px rgba(0,0,0,0.55))' : 'drop-shadow(0 32px 64px rgba(0,0,0,0.2))' }}
