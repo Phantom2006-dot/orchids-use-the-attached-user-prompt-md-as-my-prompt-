@@ -39,38 +39,41 @@ export default function Showcase() {
         </div>
       </div>
 
-      {/* Bottom row: 3 equal tiles */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-0.5">
+      {/* Bottom row: left half = Belts + Boots stacked, right half = Leather Bags */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-0.5">
 
-        <div className="relative overflow-hidden group cursor-pointer">
-          <div className="h-[220px] sm:h-64 overflow-hidden">
-            <img
-              src="/images/belt.jpg"
-              alt="Belts & Accessories"
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+        {/* Left half — Belts & Boots stacked */}
+        <div className="flex flex-col gap-0.5">
+          <div className="relative overflow-hidden group cursor-pointer">
+            <div className="h-[110px] sm:h-32 overflow-hidden">
+              <img
+                src="/images/belt.jpg"
+                alt="Belts & Accessories"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+            </div>
+            <div className="absolute bottom-2 left-3">
+              <span className="text-white text-[10px] font-bold tracking-[0.18em] uppercase">BELTS & ACCESSORIES</span>
+            </div>
           </div>
-          <div className="absolute bottom-3 left-3">
-            <span className="text-white text-[10px] font-bold tracking-[0.18em] uppercase">BELTS & ACCESSORIES</span>
+
+          <div className="relative overflow-hidden group cursor-pointer">
+            <div className="h-[110px] sm:h-32 overflow-hidden">
+              <img
+                src="/images/boots.jpg"
+                alt="Artisan Boots"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+            </div>
+            <div className="absolute bottom-2 left-3">
+              <span className="text-white text-[10px] font-bold tracking-[0.18em] uppercase">ARTISAN BOOTS</span>
+            </div>
           </div>
         </div>
 
-        <div className="relative overflow-hidden group cursor-pointer">
-          <div className="h-[220px] sm:h-64 overflow-hidden">
-            <img
-              src="/images/boots.jpg"
-              alt="Artisan Boots"
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-          </div>
-          <div className="absolute bottom-3 left-3">
-            <span className="text-white text-[10px] font-bold tracking-[0.18em] uppercase">ARTISAN BOOTS</span>
-          </div>
-        </div>
-
-        {/* Briefcase */}
+        {/* Right half — Leather Bags full height */}
         <div className="relative overflow-hidden group cursor-pointer">
           <div className="h-[220px] sm:h-64 overflow-hidden">
             <img
