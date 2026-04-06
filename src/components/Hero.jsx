@@ -25,7 +25,7 @@ export default function Hero() {
         <div className="grid lg:grid-cols-2 items-center min-h-[calc(100vh-64px)]">
 
           {/* Left Content */}
-          <div className="py-16 lg:py-0 pr-0 lg:pr-12 z-10 flex flex-col justify-center">
+          <div className="py-16 lg:py-0 pr-0 lg:pr-4 z-10 flex flex-col justify-center">
 
             <div className={`inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 mb-7 self-start border ${isDark ? 'bg-[#0d2a12] border-[#22c55e]/30' : 'bg-[#dcfce7] border-[#22c55e]/40'}`}>
               <span className="w-1.5 h-1.5 rounded-full bg-[#22c55e] animate-pulse" />
@@ -81,7 +81,7 @@ export default function Hero() {
 
           {/* Right — Bag Image */}
           <div className="hidden lg:flex relative items-center justify-end h-[calc(100vh-64px)] overflow-hidden">
-            <div className="relative w-full h-full flex items-center justify-end">
+            <div className="relative w-full h-full flex items-center justify-center">
               <img
                 src="/images/bag-adjusted.png"
                 alt="NaijaKoblas Premium Leather Bag"
