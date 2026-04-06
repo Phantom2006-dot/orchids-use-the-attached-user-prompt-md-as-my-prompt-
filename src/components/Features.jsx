@@ -60,60 +60,45 @@ export default function Features() {
   const { isDark } = useTheme()
 
   const divider = isDark ? 'border-[#22c55e]/15' : 'border-[#22c55e]/20'
+  const cellBg   = isDark ? 'bg-transparent' : 'bg-transparent'
 
   return (
     <section className={`py-20 lg:py-28 transition-colors duration-300 ${isDark ? 'bg-[#060f07]' : 'bg-[#f5f5f0]'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        {/* Header — mobile: image beside text, desktop: text only */}
+        {/* Header */}
         <div className="mb-14">
-
-          {/* Mobile header: text left, shoe image right */}
-          <div className="flex items-start gap-4 sm:block">
-            <div className="flex-1">
-              <div className="flex items-center gap-3 mb-5">
-                <div className="w-6 h-px bg-[#22c55e]" />
-                <p className={`text-[11px] font-semibold tracking-[0.22em] uppercase ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>
-                  WHAT TO EXPECT
-                </p>
-              </div>
-              <h2 className={`font-display text-[36px] sm:text-[54px] lg:text-[62px] font-extrabold leading-[1.02] tracking-[-0.025em] sm:max-w-2xl mb-6 ${isDark ? 'text-white' : 'text-[#111111]'}`}>
-                A marketplace unlike<br className="hidden sm:block" />{' '}
-                <span className="sm:hidden"> </span>anything before it.
-              </h2>
-            </div>
-
-            {/* Mobile-only side image */}
-            <div className="sm:hidden flex-shrink-0 w-28 h-36 rounded-xl overflow-hidden mt-8">
-              <img
-                src="/images/loafers.jpg"
-                alt="Artisan Loafers"
-                className="w-full h-full object-cover object-center"
-              />
-            </div>
+          <div className="flex items-center gap-3 mb-5">
+            <div className="w-6 h-px bg-[#22c55e]" />
+            <p className={`text-[11px] font-semibold tracking-[0.22em] uppercase ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>
+              WHAT TO EXPECT
+            </p>
           </div>
-
+          <h2 className={`font-display text-[42px] sm:text-[54px] lg:text-[62px] font-extrabold leading-[1.02] tracking-[-0.025em] max-w-2xl mb-6 ${isDark ? 'text-white' : 'text-[#111111]'}`}>
+            A marketplace unlike<br />anything before it.
+          </h2>
           <p className={`text-[15px] leading-relaxed max-w-xl ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
             From handmade leather shoes to premium artisan products — we are building a space where quality, identity and culture meet.
           </p>
         </div>
 
-        {/* 2×2 grid with divider lines */}
+        {/* 2×2 grid with divider lines — no card backgrounds */}
         <div className={`grid grid-cols-1 sm:grid-cols-2 border-t ${divider}`}>
           {features.map((feature, i) => (
             <div
               key={i}
-              className={`px-0 sm:px-8 py-10
+              className={`${cellBg} px-0 sm:px-8 py-10
                 ${i % 2 === 0 ? `sm:border-r ${divider}` : ''}
                 ${i < 2 ? `border-b ${divider}` : ''}
                 ${i % 2 === 0 && i === 0 ? 'sm:pl-0' : ''}
                 ${i % 2 === 1 ? 'sm:pl-8' : ''}
-                ${i >= 2 ? `border-b sm:border-b-0 ${divider}` : ''}
               `}
             >
+              {/* Icon — standalone, no background box */}
               <div className="mb-5">
                 {feature.icon}
               </div>
+
               <h3 className={`font-display font-bold text-[18px] sm:text-[20px] mb-3 tracking-[-0.01em] ${isDark ? 'text-white' : 'text-[#111111]'}`}>
                 {feature.title}
               </h3>

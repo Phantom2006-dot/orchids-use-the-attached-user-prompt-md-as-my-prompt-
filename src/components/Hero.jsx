@@ -18,24 +18,14 @@ export default function Hero() {
   }
 
   return (
-    <section className={`pt-16 overflow-hidden relative transition-colors duration-300 ${isDark ? 'bg-[#060f07]' : 'bg-[#f5f5f0]'}`}>
+    <section className={`min-h-screen pt-16 overflow-hidden relative transition-colors duration-300 ${isDark ? 'bg-[#060f07]' : 'bg-[#f5f5f0]'}`}>
       <div className={`absolute inset-0 pointer-events-none ${isDark ? 'bg-gradient-to-br from-[#0c2010] via-[#060f07] to-[#060f07]' : 'bg-gradient-to-br from-[#d4f7de] via-[#f5f5f0] to-[#f5f5f0]'}`} />
 
-      {/* Mobile hero image — hidden on desktop */}
-      <div className="block lg:hidden relative z-10 w-full h-64 sm:h-72 overflow-hidden">
-        <img
-          src="/images/sneakers.jpg"
-          alt="NaijaKoblas Artisan Sneakers"
-          className="w-full h-full object-cover object-top"
-        />
-        <div className={`absolute inset-0 bg-gradient-to-b from-transparent via-transparent ${isDark ? 'to-[#060f07]' : 'to-[#f5f5f0]'}`} />
-      </div>
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 h-full">
-        <div className="grid lg:grid-cols-2 items-center lg:min-h-[calc(100vh-64px)]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative h-full">
+        <div className="grid lg:grid-cols-2 items-center min-h-[calc(100vh-64px)]">
 
           {/* Left Content */}
-          <div className="py-8 lg:py-0 pr-0 lg:pr-12 z-10 flex flex-col justify-center">
+          <div className="py-16 lg:py-0 pr-0 lg:pr-12 z-10 flex flex-col justify-center">
 
             <div className={`inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 mb-7 self-start border ${isDark ? 'bg-[#0d2a12] border-[#22c55e]/30' : 'bg-[#dcfce7] border-[#22c55e]/40'}`}>
               <span className="w-1.5 h-1.5 rounded-full bg-[#22c55e] animate-pulse" />
@@ -89,7 +79,7 @@ export default function Hero() {
             </p>
           </div>
 
-          {/* Right — Bag Image (desktop only) */}
+          {/* Right — Bag Image */}
           <div className="hidden lg:flex relative items-center justify-end h-[calc(100vh-64px)]">
             <div className="relative w-full h-full flex items-center justify-end">
               <img
@@ -104,7 +94,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="hidden lg:flex absolute bottom-7 left-1/2 -translate-x-1/2 flex-col items-center gap-1.5 opacity-30">
+      <div className="absolute bottom-7 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 opacity-30">
         <span className={`text-[9px] font-semibold tracking-[0.25em] uppercase ${isDark ? 'text-white' : 'text-gray-800'}`}>Scroll</span>
         <div className={`w-px h-10 ${isDark ? 'bg-white/40' : 'bg-black/30'}`} />
       </div>

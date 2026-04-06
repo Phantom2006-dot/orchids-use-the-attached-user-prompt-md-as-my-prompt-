@@ -44,29 +44,7 @@ export default function Social() {
           Get behind-the-scenes updates, artisan stories, and launch news before anyone else.
         </p>
 
-        {/* Mobile: 2-col grid, last button full width. Desktop: flex row */}
-        <div className="grid grid-cols-2 gap-3 sm:hidden">
-          {socials.slice(0, 2).map((s) => (
-            <a
-              key={s.label}
-              href={s.href}
-              className={`flex items-center justify-center gap-2.5 border text-sm font-medium px-4 py-3.5 rounded-lg transition-all duration-200 ${isDark ? 'bg-[#0d1f0f] border-white/10 hover:border-[#22c55e]/40 hover:bg-[#0f2512] text-white' : 'bg-white border-black/10 hover:border-[#22c55e]/50 hover:bg-[#f0fdf4] text-gray-900'}`}
-            >
-              <span className="text-[#22c55e]">{s.icon}</span>
-              {s.label}
-            </a>
-          ))}
-          <a
-            href={socials[2].href}
-            className={`col-span-2 flex items-center justify-center gap-2.5 border text-sm font-medium px-4 py-3.5 rounded-lg transition-all duration-200 ${isDark ? 'bg-[#0d1f0f] border-white/10 hover:border-[#22c55e]/40 hover:bg-[#0f2512] text-white' : 'bg-white border-black/10 hover:border-[#22c55e]/50 hover:bg-[#f0fdf4] text-gray-900'}`}
-          >
-            <span className="text-[#22c55e]">{socials[2].icon}</span>
-            {socials[2].label}
-          </a>
-        </div>
-
-        {/* Desktop: flex row */}
-        <div className="hidden sm:flex flex-wrap items-center justify-center gap-4">
+        <div className="flex flex-wrap items-center justify-center gap-4">
           {socials.map((s) => (
             <a
               key={s.label}
