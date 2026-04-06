@@ -29,7 +29,7 @@ export default function CTA() {
           — JOIN EARLY ACCESS
         </p>
 
-        <h2 className="font-display text-[44px] sm:text-[56px] lg:text-[64px] font-extrabold leading-[1.05] tracking-[-0.02em] mb-6 text-white">
+        <h2 className="font-editorial text-[44px] sm:text-[56px] lg:text-[64px] font-semibold leading-[1.1] tracking-[-0.01em] mb-6 text-white">
           Be the first<br />to know.
         </h2>
 

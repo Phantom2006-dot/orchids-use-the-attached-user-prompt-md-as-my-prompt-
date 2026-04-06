@@ -74,7 +74,7 @@ export default function Features() {
               WHAT TO EXPECT
             </p>
           </div>
-          <h2 className={`font-display text-[42px] sm:text-[54px] lg:text-[62px] font-extrabold leading-[1.02] tracking-[-0.025em] max-w-2xl mb-6 ${isDark ? 'text-white' : 'text-[#111111]'}`}>
+          <h2 className={`font-display text-[32px] sm:text-[42px] lg:text-[50px] font-extrabold leading-[1.02] tracking-[-0.025em] max-w-2xl mb-6 ${isDark ? 'text-white' : 'text-[#111111]'}`}>
             A marketplace unlike<br />anything before it.
           </h2>
           <p className={`text-[15px] leading-relaxed max-w-xl ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>

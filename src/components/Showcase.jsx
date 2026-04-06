@@ -36,9 +36,9 @@ export default function Showcase() {
             <p className="text-[#22c55e] text-[10px] font-semibold tracking-[0.22em] uppercase mb-5">
               — CRAFTED WITH PRIDE
             </p>
-            <blockquote className={`font-display text-[26px] sm:text-[30px] lg:text-[34px] font-extrabold leading-[1.15] tracking-[-0.02em] mb-6 ${isDark ? 'text-white' : 'text-[#111111]'}`}>
+            <blockquote className={`font-editorial text-[26px] sm:text-[30px] lg:text-[34px] font-semibold leading-[1.2] tracking-[-0.01em] mb-6 ${isDark ? 'text-white' : 'text-[#111111]'}`}>
               "Behind every product is a maker whose craft deserves a{' '}
-              <span className="text-[#22c55e]">wider stage.</span>"
+              <span className="text-[#22c55e] italic">wider stage.</span>"
             </blockquote>
             <div className="flex items-center gap-3">
               <div className="w-6 h-px bg-[#22c55e]" />

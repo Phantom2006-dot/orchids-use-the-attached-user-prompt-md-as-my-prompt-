@@ -29,3 +29,7 @@ html.light body {
 .font-display {
   font-family: var(--font-brand);
 }
+
+.font-editorial {
+  font-family: 'Playfair Display', Georgia, serif;
+}
