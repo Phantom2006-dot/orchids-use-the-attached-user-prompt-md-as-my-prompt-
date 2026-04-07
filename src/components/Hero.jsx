@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import emailjs from '@emailjs/browser'
 import { useTheme } from '../context/ThemeContext'
 
 const ClockIcon = () => (
@@ -10,11 +11,40 @@ const ClockIcon = () => (
 export default function Hero() {
   const [email, setEmail] = useState('')
   const [submitted, setSubmitted] = useState(false)
+  const [loading, setLoading] = useState(false)
   const { isDark } = useTheme()
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    if (email.trim()) setSubmitted(true)
+    if (!email.trim()) return
+    setLoading(true)
+
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID
+    const subscriberTemplate = import.meta.env.VITE_EMAILJS_TEMPLATE_SUBSCRIBER_ID
+    const adminTemplate = import.meta.env.VITE_EMAILJS_TEMPLATE_ADMIN_ID
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+
+    if (serviceId && subscriberTemplate && adminTemplate && publicKey) {
+      try {
+        await emailjs.send(
+          serviceId,
+          subscriberTemplate,
+          { user_email: email, to_email: email },
+          publicKey
+        )
+        await emailjs.send(
+          serviceId,
+          adminTemplate,
+          { user_email: email, to_email: 'info@naijakoblas.com' },
+          publicKey
+        )
+      } catch (err) {
+        console.error('Email send error:', err)
+      }
+    }
+
+    setLoading(false)
+    setSubmitted(true)
   }
 
   return (
@@ -56,13 +86,15 @@ export default function Hero() {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter your email address"
                   required
+                  disabled={loading}
                   className={`flex-1 border text-sm px-4 py-3 rounded-md focus:outline-none transition-colors ${isDark ? 'bg-[#0b1c0d] border-white/10 text-white placeholder-gray-600 focus:border-[#22c55e]/50' : 'bg-white border-black/10 text-gray-900 placeholder-gray-400 focus:border-[#22c55e]/60'}`}
                 />
                 <button
                   type="submit"
-                  className="w-full sm:w-auto bg-[#22c55e] hover:bg-[#16a34a] text-black font-bold text-sm px-5 py-3 rounded-md transition-all duration-200 whitespace-nowrap hover:scale-[1.02] active:scale-[0.98]"
+                  disabled={loading}
+                  className="w-full sm:w-auto bg-[#22c55e] hover:bg-[#16a34a] text-black font-bold text-sm px-5 py-3 rounded-md transition-all duration-200 whitespace-nowrap hover:scale-[1.02] active:scale-[0.98] disabled:opacity-70 disabled:cursor-not-allowed"
                 >
-                  + Join Early Access
+                  {loading ? 'Joining...' : '+ Join Early Access'}
                 </button>
               </form>
             ) : (
