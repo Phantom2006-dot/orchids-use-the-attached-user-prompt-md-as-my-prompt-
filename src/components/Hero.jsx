@@ -12,47 +12,54 @@ export default function Hero() {
   const [email, setEmail] = useState('')
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
+  const [errorMsg, setErrorMsg] = useState('')
   const { isDark } = useTheme()
 
   const handleSubmit = async (e) => {
     e.preventDefault()
     if (!email.trim()) return
     setLoading(true)
+    setErrorMsg('')
 
     const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID
     const subscriberTemplate = import.meta.env.VITE_EMAILJS_TEMPLATE_SUBSCRIBER_ID
     const adminTemplate = import.meta.env.VITE_EMAILJS_TEMPLATE_ADMIN_ID
     const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
 
-    if (serviceId && subscriberTemplate && adminTemplate && publicKey) {
-      try {
-        await emailjs.send(
-          serviceId,
-          subscriberTemplate,
-          {
-            to_email: email,
-            subject: 'Welcome to NaijaKoblas — You\'re on the list!',
-            message: `Hi there,\n\nThank you for joining the NaijaKoblas early access list!\n\nWe're building something truly special — a marketplace that brings Nigerian craftsmanship to the world. Quality, identity, and culture in every stitch.\n\nYou'll be the first to know when we launch. Stay tuned.\n\nWith love,\nThe NaijaKoblas Team\ninfo@naijakoblas.com`,
-          },
-          publicKey
-        )
-        await emailjs.send(
-          serviceId,
-          adminTemplate,
-          {
-            to_email: 'info@naijakoblas.com',
-            subject: 'New NaijaKoblas Waitlist Sign-up',
-            message: `A new user has joined the NaijaKoblas waitlist.\n\nEmail address: ${email}\n\nLogin to your dashboard to view all sign-ups.`,
-          },
-          publicKey
-        )
-      } catch (err) {
-        console.error('Email send error:', err)
-      }
+    if (!serviceId || !subscriberTemplate || !adminTemplate || !publicKey) {
+      setErrorMsg('Email service not configured. Please contact info@naijakoblas.com.')
+      setLoading(false)
+      return
     }
 
-    setLoading(false)
-    setSubmitted(true)
+    try {
+      await emailjs.send(
+        serviceId,
+        subscriberTemplate,
+        {
+          to_email: email,
+          subject: 'Welcome to NaijaKoblas — You\'re on the list!',
+          message: `Hi there,\n\nThank you for joining the NaijaKoblas early access list!\n\nWe're building something truly special — a marketplace that brings Nigerian craftsmanship to the world. Quality, identity, and culture in every stitch.\n\nYou'll be the first to know when we launch. Stay tuned.\n\nWith love,\nThe NaijaKoblas Team\ninfo@naijakoblas.com`,
+        },
+        publicKey
+      )
+      await emailjs.send(
+        serviceId,
+        adminTemplate,
+        {
+          to_email: 'info@naijakoblas.com',
+          subject: 'New NaijaKoblas Waitlist Sign-up',
+          message: `A new user has joined the NaijaKoblas waitlist.\n\nEmail address: ${email}\n\nLogin to your dashboard to view all sign-ups.`,
+        },
+        publicKey
+      )
+      setLoading(false)
+      setSubmitted(true)
+    } catch (err) {
+      console.error('Email send error:', err)
+      setErrorMsg(`Failed: ${err?.text || err?.message || JSON.stringify(err)}`)
+      setLoading(false)
+    }
   }
 
   return (
@@ -112,6 +119,10 @@ export default function Hero() {
                 </svg>
                 <span className="text-[#16a34a] text-sm font-medium">You're on the list! We'll be in touch.</span>
               </div>
+            )}
+
+            {errorMsg && (
+              <p className="text-red-500 text-xs mt-2">{errorMsg}</p>
             )}
 
             <p className={`text-xs mt-3.5 ${isDark ? 'text-gray-600' : 'text-gray-400'}`}>
