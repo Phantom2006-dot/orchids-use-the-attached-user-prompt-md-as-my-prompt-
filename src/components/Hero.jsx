@@ -26,13 +26,6 @@ export default function Hero() {
     const adminTemplate = import.meta.env.VITE_EMAILJS_TEMPLATE_ADMIN_ID
     const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
 
-    console.log('EmailJS config check:', {
-      serviceId: serviceId ? `set (${serviceId})` : 'MISSING',
-      subscriberTemplate: subscriberTemplate ? `set (${subscriberTemplate})` : 'MISSING',
-      adminTemplate: adminTemplate ? `set (${adminTemplate})` : 'MISSING',
-      publicKey: publicKey ? 'set' : 'MISSING',
-    })
-
     if (!serviceId || !subscriberTemplate || !adminTemplate || !publicKey) {
       setErrorMsg('Email service not configured — credentials missing.')
       setLoading(false)
