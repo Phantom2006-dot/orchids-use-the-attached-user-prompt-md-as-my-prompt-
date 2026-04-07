@@ -29,13 +29,21 @@ export default function Hero() {
         await emailjs.send(
           serviceId,
           subscriberTemplate,
-          { user_email: email, to_email: email },
+          {
+            to_email: email,
+            subject: 'Welcome to NaijaKoblas — You\'re on the list!',
+            message: `Hi there,\n\nThank you for joining the NaijaKoblas early access list!\n\nWe're building something truly special — a marketplace that brings Nigerian craftsmanship to the world. Quality, identity, and culture in every stitch.\n\nYou'll be the first to know when we launch. Stay tuned.\n\nWith love,\nThe NaijaKoblas Team\ninfo@naijakoblas.com`,
+          },
           publicKey
         )
         await emailjs.send(
           serviceId,
           adminTemplate,
-          { user_email: email, to_email: 'info@naijakoblas.com' },
+          {
+            to_email: 'info@naijakoblas.com',
+            subject: 'New NaijaKoblas Waitlist Sign-up',
+            message: `A new user has joined the NaijaKoblas waitlist.\n\nEmail address: ${email}\n\nLogin to your dashboard to view all sign-ups.`,
+          },
           publicKey
         )
       } catch (err) {
