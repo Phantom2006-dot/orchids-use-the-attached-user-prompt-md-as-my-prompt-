@@ -41,6 +41,8 @@ export default function CTA() {
         {
           to_email: 'info@naijakoblas.com',
           subject: 'New NaijaKoblas Waitlist Sign-up',
+          name: email,
+          email: email,
           message: `A new user has joined the NaijaKoblas waitlist.\n\nEmail address: ${email}\n\nLogin to your dashboard to view all sign-ups.`,
         },
         publicKey
