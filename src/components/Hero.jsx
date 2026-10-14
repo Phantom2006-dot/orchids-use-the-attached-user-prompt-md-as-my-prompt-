@@ -39,7 +39,7 @@ export default function Hero() {
         {
           to_email: email,
           subject: 'Welcome to NaijaKoblas — You\'re on the list!',
-          message: `Hi there,\n\nThank you for joining the NaijaKoblas early access list!\n\nWe're building something truly special — a marketplace that brings Nigerian craftsmanship to the world. Quality, identity, and culture in every stitch.\n\nYou'll be the first to know when we launch. Stay tuned.\n\nWith love,\nThe NaijaKoblas Team\ninfo@naijakoblas.com`,
+          message: `Hi there,\n\nThank you for joining the NaijaKoblas waitlist!\n\nYou'll be among the first to discover authentic Nigerian leather craftsmanship, explore our marketplace, and receive exclusive updates about the upcoming NaijaKoblas Exhibition 2027: From Naija to the World.\n\nStay tuned — something exciting is coming.\n\nWith love,\nThe NaijaKoblas Team\ninfo@naijakoblas.com`,
         },
         publicKey
       )
@@ -76,7 +76,7 @@ export default function Hero() {
 
             <div className={`inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 mb-7 self-start border ${isDark ? 'bg-[#0d2a12] border-[#22c55e]/30' : 'bg-[#dcfce7] border-[#22c55e]/40'}`}>
               <span className="w-1.5 h-1.5 rounded-full bg-[#22c55e] animate-pulse" />
-              <span className="text-[#16a34a] text-[11px] font-semibold tracking-[0.18em] uppercase">Coming Soon</span>
+              <span className="text-[#16a34a] text-[11px] font-semibold tracking-[0.14em] uppercase">Something Exciting Is Coming! 🇳🇬</span>
             </div>
 
             <h1 className={`font-display text-[44px] sm:text-[60px] lg:text-[68px] xl:text-[76px] font-extrabold leading-[0.93] tracking-[-0.02em] mb-7 ${isDark ? 'text-white' : 'text-[#111111]'}`}>
@@ -86,13 +86,13 @@ export default function Hero() {
               <span className="block">purpose.</span>
             </h1>
 
-            <p className={`text-[15px] sm:text-base leading-relaxed max-w-[400px] mb-7 ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
-              NaijaKoblas is creating a platform that brings Nigerian craftsmanship to the world. Quality, identity and culture — in every stitch.
+            <p className={`text-[15px] sm:text-base leading-relaxed max-w-[460px] mb-7 ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
+              Discover authentic Nigerian leather craftsmanship with NaijaKoblas. Be among the first to explore our marketplace and receive exclusive updates about the upcoming NaijaKoblas Exhibition 2027: From Naija to the World.
             </p>
 
             <div className={`flex items-center gap-2 text-[13px] mb-8 ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>
               <ClockIcon />
-              <span>Our full platform is currently in development</span>
+              <span>Join the Waitlist. Be First to Discover.</span>
             </div>
 
             {!submitted ? (
@@ -111,7 +111,7 @@ export default function Hero() {
                   disabled={loading}
                   className="w-full sm:w-auto bg-[#22c55e] hover:bg-[#16a34a] text-black font-bold text-sm px-5 py-3 rounded-md transition-all duration-200 whitespace-nowrap hover:scale-[1.02] active:scale-[0.98] disabled:opacity-70 disabled:cursor-not-allowed"
                 >
-                  {loading ? 'Joining...' : '+ Join Early Access'}
+                  {loading ? 'Joining...' : 'Join the Waitlist'}
                 </button>
               </form>
             ) : (
@@ -128,7 +128,7 @@ export default function Hero() {
             )}
 
             <p className={`text-xs mt-3.5 ${isDark ? 'text-gray-600' : 'text-gray-400'}`}>
-              No spam. Just the access when we go live.
+              Exclusive updates. No spam. Just the access when we go live.
             </p>
           </div>
 

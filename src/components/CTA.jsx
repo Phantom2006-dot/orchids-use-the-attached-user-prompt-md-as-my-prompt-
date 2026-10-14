@@ -31,7 +31,7 @@ export default function CTA() {
         {
           to_email: email,
           subject: 'Welcome to NaijaKoblas — You\'re on the list!',
-          message: `Hi there,\n\nThank you for joining the NaijaKoblas early access list!\n\nWe're building something truly special — a marketplace that brings Nigerian craftsmanship to the world. Quality, identity, and culture in every stitch.\n\nYou'll be the first to know when we launch. Stay tuned.\n\nWith love,\nThe NaijaKoblas Team\ninfo@naijakoblas.com`,
+          message: `Hi there,\n\nThank you for joining the NaijaKoblas waitlist!\n\nYou'll be among the first to discover authentic Nigerian leather craftsmanship, explore our marketplace, and receive exclusive updates about the upcoming NaijaKoblas Exhibition 2027: From Naija to the World.\n\nStay tuned — something exciting is coming.\n\nWith love,\nThe NaijaKoblas Team\ninfo@naijakoblas.com`,
         },
         publicKey
       )
@@ -71,15 +71,15 @@ export default function CTA() {
 
       <div className="relative z-10 max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <p className="text-[#22c55e] text-[11px] font-semibold tracking-[0.22em] uppercase mb-5">
-          — JOIN EARLY ACCESS
+          — SOMETHING EXCITING IS COMING! 🇳🇬
         </p>
 
         <h2 className="font-editorial text-[44px] sm:text-[56px] lg:text-[64px] font-semibold leading-[1.1] tracking-[-0.01em] mb-6 text-white">
-          Be the first<br />to know.
+          Join the<br />waitlist.
         </h2>
 
         <p className="text-[15px] leading-relaxed max-w-md mx-auto mb-9 text-gray-300">
-          Join our early access list and be the first to experience NaijaKoblas when we go live. Exclusive first access. No spam.
+          Be first to discover authentic Nigerian leather craftsmanship and receive exclusive updates about the NaijaKoblas Exhibition 2027: From Naija to the World.
         </p>
 
         {!submitted ? (
@@ -98,7 +98,7 @@ export default function CTA() {
               disabled={loading}
               className="w-full sm:w-auto bg-[#22c55e] hover:bg-[#16a34a] text-black font-semibold text-sm px-6 py-3.5 rounded-md transition-all duration-200 whitespace-nowrap hover:scale-[1.02] active:scale-[0.98] disabled:opacity-70 disabled:cursor-not-allowed"
             >
-              {loading ? 'Joining...' : '+ Join Early Access'}
+              {loading ? 'Joining...' : 'Join the Waitlist'}
             </button>
           </form>
         ) : (
